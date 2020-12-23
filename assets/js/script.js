@@ -1,5 +1,7 @@
 console.log('AN/UG Financial')
 
+const logo = document.getElementById('logo');
+const loginContainer = document.getElementById('loginContainer')
 const loginFormUsername = document.getElementById('loginFormName');
 const loginFormPassword = document.getElementById('loginFormPassword');
 const loginForm = document.getElementById('loginForm');
@@ -22,27 +24,32 @@ const USERS = {
     admin: {
         user: 'admin',
         pass: 'admin',
-        displayName: 'Admin'
+        displayName: 'Admin',
+        currentBalance: '$1,000,000'
     },
     tac: {
         user: 'tac',
         pass: '10012009',
-        displayName: 'Ty'
+        displayName: 'Ty',
+        currentBalance: '$900'
     },
     moc: {
         user: 'moc',
         pass: '02162013',
-        displayName: 'Makenzie'
+        displayName: 'Makenzie',
+        currentBalance: '$900'
     },
     wnw: {
         user: 'wnw',
         pass: '05012012',
-        displayName: 'Whitney'
+        displayName: 'Whitney',
+        currentBalance: '$900'
     },
     wew: {
         user: 'wew',
         pass: '05022014',
-        displayName: 'Weslyn'
+        displayName: 'Weslyn',
+        currentBalance: '$900'
     }
 };
 
@@ -55,6 +62,7 @@ function validateLogin(username='', pass='') {
     return currentUser ? currentUser : null;
 }
 
-function loadAccount() {
-
+function loadAccount(currentUser) {
+    logo.classList.add('move-left');
+    loginContainer.classList.add('move-right');
 }
