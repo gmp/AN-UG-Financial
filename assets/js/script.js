@@ -25,7 +25,7 @@ loginForm.addEventListener('submit', (event) => {
 const USERS = {
     admin: {
         user: 'admin',
-        pass: 'admin',
+        pass: '99999',
         displayName: 'Admin',
         currentBalance: '$1,000,000.00'
     },
