@@ -97,11 +97,11 @@ p {
 }
 
 .move-left {
-    translate: -150% 0;
+    translate: -1000px 0;
 }
 
 .move-right {
-    translate: 150% 0;
+    translate: 1000px 0;
 }
 
 #accountContainer {
