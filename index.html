@@ -15,13 +15,19 @@
 
 <body>
     <main id="content">
-        <img src="assets/img/logo_transparent.png" alt="AN/UG Financial Logo" id="logo" class="logo">
-        <div class="login" id="loginContainer">
+        <img src="assets/img/logo_transparent.png" alt="AN/UG Financial Logo" id="mainLogo" class="hidden">
+        <div class="login-container center-all">
+            <img src="assets/img/logo_transparent.png" alt="AN/UG Financial Logo" id="loginLogo">
             <form id="loginForm">
                 <input type="text" name="username" placeholder="username" id="loginFormName" >
                 <input type="password" name="password" placeholder="password" id="loginFormPassword" inputmode="numeric">
                 <button type="submit">Log In</button>
             </form>
+        </div>
+        <div class="center-all" id="accountContainer">
+            <h1 id="welcomeHeader"></h1>
+            <p>Your current balance is:</p>
+            <p id="currentBalance"></p>
         </div>
     </main>
     <script src="assets/js/script.js"></script>

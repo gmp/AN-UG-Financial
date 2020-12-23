@@ -1,3 +1,8 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 html {
     background-color: #0c0c1e;
     font-size: 1em;
@@ -6,42 +11,52 @@ html {
 body, p, input, button {
     font-family: 'Bitter', serif;
     font-weight: 200;
+    color: #f3e3e2;
+}
+
+h1 {
+    margin: 2rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 1rem;
 }
 
 #content {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     padding: 1rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.logo {
+.center-all {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-container {
+    width: 100%;
+    padding: 1rem;
+    /* display: none; */
+}
+
+#loginLogo {
     display: block;
     max-width: 100%;
-    transition: translate 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: translate 600ms cubic-bezier(.6,-0.28,.74,.05);
 }
 
-.move-left {
-    translate: -150vw 0;
-}
-
-.move-right {
-    translate: 150vw 0;
-}
-
-.login {
-    width: 100%;
-    transition: translate 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.login #loginForm {
+.login-container #loginForm {
     padding: 2rem 0.5rem;
+    transition: translate 600ms cubic-bezier(.6,-0.28,.74,.05);
 }
 
-.login input {
+.login-container input {
     display: block;
     width: 100%;
     margin-bottom: 1rem;
@@ -53,12 +68,12 @@ body, p, input, button {
     line-height: 2rem;
 }
 
-.login input:focus {
+.login-container input:focus {
     outline: none;
     border-bottom: 1px solid #f3e3e2;
 }
 
-.login button {
+.login-container button {
     display: block;
     width: 100%;
     padding: 0.5rem;
@@ -69,18 +84,67 @@ body, p, input, button {
     font-size: 1rem;
 }
 
-.login button:hover {
+.login-container button:hover {
     background: #335771;
 }
 
-.login button:active {
+.login-container button:active {
     background: #811831;
 }
 
-.login button:focus {
+.login-container button:focus {
     outline: none;
 }
 
-@media only screen and (max-device-width: 812px) {
+.move-left {
+    translate: -150vw 0;
+}
 
+.move-right {
+    translate: 150vw 0;
+}
+
+#accountContainer {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+#accountContainer.show {
+    display: block;
+    animation: show-account-info 600ms ease-in;
+}
+
+@keyframes show-account-info {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+
+#accountContainer.hidden {
+    display: none;
+    opacity: 0;
+}
+
+#mainLogo {
+    position: relative;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 50%;
+    max-width: 100%;
+    transform: translateX(-50%);
+    transition: transform 500ms ease-out
+}
+
+#mainLogo.hidden {
+    transform: translateX(-150vw);
+}
+
+#currentBalance {
+    font-weight: 400;
 }
