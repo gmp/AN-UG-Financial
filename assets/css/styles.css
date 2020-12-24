@@ -8,7 +8,7 @@ html {
     font-size: 1em;
 }
 
-body, p, input, button {
+body, p, a, input, button {
     font-family: 'Bitter', serif;
     font-weight: 200;
     color: #f3e3e2;
@@ -147,4 +147,33 @@ p {
 
 #currentBalance {
     font-weight: 400;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+footer .resources {
+    float: left;
+    font-size: 1rem;
+}
+
+.resources li {
+    float: left;
+    margin-right: 1rem;
+}
+
+.resources li a,
+.resources li a:hover,
+.resources li a:visited {
+    text-decoration: none;
+    color: #f3e3e2;
+}
+
+footer .copyright {
+    float: right;
+    font-size: 1rem;
 }
