@@ -62,7 +62,35 @@ function validateLogin(username='', pass='') {
     }
 
     const currentUser = USERS[username.toLowerCase()];
-    return currentUser ? currentUser : null;
+
+    if (!currentUser) {
+        debugger;
+        gtag('event', 'login_attempt', {
+            'event_category': 'login',
+            'event_label': 'invalid user',
+            'value': 0
+        });
+        return null;
+    }
+
+    if (currentUser.pass !== pass.toLowerCase()) {
+        debugger;
+        gtag('event', 'login_attempt', {
+            'event_category': 'login',
+            'event_label': 'invalid pass',
+            'value': 0
+        });
+        return null;
+    }
+
+    debugger;
+    gtag('event', 'login_attempt', {
+        'event_category': 'login',
+        'event_label': `user:${currentUser.user}`,
+        'value': 1
+    });
+
+    return currentUser;
 }
 
 function loadAccount(currentUser) {
