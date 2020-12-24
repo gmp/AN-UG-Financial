@@ -11,17 +11,6 @@ const mainLogo = document.getElementById('mainLogo');
 const welcomeHeader = document.getElementById('welcomeHeader');
 const currentBalance = document.getElementById('currentBalance');
 
-loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const username = loginFormUsername.value;
-    const pass = loginFormPassword.value;
-    const currentUser = validateLogin(username, pass);
-    if (!currentUser) {
-        window.alert('Invalid username or password');
-    }
-    loadAccount(currentUser);
-});
-
 const USERS = {
     admin: {
         user: 'admin',
@@ -54,6 +43,17 @@ const USERS = {
         currentBalance: '$900.00'
     }
 };
+
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const username = loginFormUsername.value;
+    const pass = loginFormPassword.value;
+    const currentUser = validateLogin(username, pass);
+    if (!currentUser) {
+        window.alert('Invalid username or password');
+    }
+    loadAccount(currentUser);
+});
 
 function validateLogin(username='', pass='') {
     if (!username || !pass) {

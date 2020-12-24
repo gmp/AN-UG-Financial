@@ -48,12 +48,12 @@ p {
 #loginLogo {
     display: block;
     max-width: 100%;
-    transition: translate 600ms cubic-bezier(.6,-0.28,.74,.05);
+    transition: transform 600ms cubic-bezier(.6,-0.28,.74,.05);
 }
 
 .login-container #loginForm {
     padding: 2rem 0.5rem;
-    transition: translate 600ms cubic-bezier(.6,-0.28,.74,.05);
+    transition: transform 600ms cubic-bezier(.6,-0.28,.74,.05);
 }
 
 .login-container input {
@@ -97,11 +97,11 @@ p {
 }
 
 .move-left {
-    translate: -1000px 0;
+    transform: translateX(-100vw);
 }
 
 .move-right {
-    translate: 1000px 0;
+    transform: translateX(100vw);
 }
 
 #accountContainer {
