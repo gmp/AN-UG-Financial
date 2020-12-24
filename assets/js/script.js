@@ -1,6 +1,7 @@
 console.log('AN/UG Financial')
 
 // login elements
+const loginContainer = document.getElementById('loginContainer');
 const loginLogo = document.getElementById('loginLogo');
 const loginFormUsername = document.getElementById('loginFormName');
 const loginFormPassword = document.getElementById('loginFormPassword');
@@ -71,6 +72,7 @@ function loadAccount(currentUser) {
     loginLogo.classList.add('move-left');
     loginForm.classList.add('move-right');
     setTimeout(() => {
+        loginContainer.classList.add('hide');
         mainLogo.classList.remove('hidden');
         accountContainer.classList.add('show');
     }, 700);
@@ -80,11 +82,11 @@ function getWelcomeMessage () {
     const d = new Date();
     const hours = d.getHours();
     if (hours < 12) {
-        return 'Good Morning,';
+        return 'Good morning,';
     } else if (hours >= 12 && hours < 17) {
-        return 'Good Afternoon,';
+        return 'Good afternoon,';
     } else if (hours >= 17 && hours <=24) {
-        return 'Good Evening,'
+        return 'Good evening,'
     } else {
         return 'Hello,'
     }

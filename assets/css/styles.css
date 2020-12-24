@@ -42,7 +42,10 @@ p {
 .login-container {
     width: 100%;
     padding: 1rem;
-    /* display: none; */
+}
+
+.login-container.hide {
+    display: none;
 }
 
 #loginLogo {
