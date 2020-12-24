@@ -73,7 +73,7 @@ function loadAccount(currentUser) {
     loginForm.classList.add('move-right');
     setTimeout(() => {
         loginContainer.classList.add('hide');
-        mainLogo.classList.remove('hidden');
+        mainLogo.classList.remove('off-left');
         accountContainer.classList.add('show');
     }, 700);
 }

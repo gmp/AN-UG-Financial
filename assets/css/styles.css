@@ -39,13 +39,14 @@ p {
     transform: translate(-50%, -50%);
 }
 
+.hide {
+    display: none;
+    opacity: 0;
+}
+
 .login-container {
     width: 100%;
     padding: 1rem;
-}
-
-.login-container.hide {
-    display: none;
 }
 
 #loginLogo {
@@ -128,11 +129,6 @@ p {
     }
 }
 
-#accountContainer.hidden {
-    display: none;
-    opacity: 0;
-}
-
 #mainLogo {
     position: relative;
     top: 0;
@@ -144,7 +140,7 @@ p {
     transition: transform 500ms ease-out
 }
 
-#mainLogo.hidden {
+#mainLogo.off-left {
     transform: translateX(-150vw);
 }
 
