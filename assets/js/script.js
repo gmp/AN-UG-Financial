@@ -64,7 +64,6 @@ function validateLogin(username='', pass='') {
     const currentUser = USERS[username.toLowerCase()];
 
     if (!currentUser) {
-        debugger;
         gtag('event', 'login_attempt', {
             'event_category': 'login',
             'event_label': 'invalid user',
@@ -74,7 +73,6 @@ function validateLogin(username='', pass='') {
     }
 
     if (currentUser.pass !== pass.toLowerCase()) {
-        debugger;
         gtag('event', 'login_attempt', {
             'event_category': 'login',
             'event_label': 'invalid pass',
@@ -83,7 +81,6 @@ function validateLogin(username='', pass='') {
         return null;
     }
 
-    debugger;
     gtag('event', 'login_attempt', {
         'event_category': 'login',
         'event_label': `user:${currentUser.user}`,
