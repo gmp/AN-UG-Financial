@@ -52,6 +52,7 @@ loginForm.addEventListener('submit', (event) => {
     const currentUser = validateLogin(username, pass);
     if (!currentUser) {
         window.alert('Invalid username or password');
+        return;
     }
     loadAccount(currentUser);
 });
@@ -64,28 +65,28 @@ function validateLogin(username='', pass='') {
     const currentUser = USERS[username.toLowerCase()];
 
     if (!currentUser) {
-        gtag('event', 'login_attempt', {
+        firebase.analytics().logEvent('login_attempt', {
             'event_category': 'login',
             'event_label': 'invalid user',
             'value': 0
-        });
+        })
         return null;
     }
 
     if (currentUser.pass !== pass.toLowerCase()) {
-        gtag('event', 'login_attempt', {
+        firebase.analytics().logEvent('login_attempt', {
             'event_category': 'login',
             'event_label': 'invalid pass',
             'value': 0
-        });
+        })
         return null;
     }
 
-    gtag('event', 'login_attempt', {
+    firebase.analytics().logEvent('login_attempt', {
         'event_category': 'login',
         'event_label': `user:${currentUser.user}`,
         'value': 1
-    });
+    })
 
     return currentUser;
 }
