@@ -35,7 +35,7 @@ const USERS = {
         user: 'wnw',
         pass: '05012012',
         displayName: 'Whitney',
-        currentBalance: '$1,000.00'
+        currentBalance: '$1,150.00'
     },
     wew: {
         user: 'wew',
