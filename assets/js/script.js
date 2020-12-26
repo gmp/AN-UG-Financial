@@ -23,25 +23,25 @@ const USERS = {
         user: 'tac',
         pass: '10012009',
         displayName: 'Ty',
-        currentBalance: '$1000.00'
+        currentBalance: '$1,000.00'
     },
     moc: {
         user: 'moc',
         pass: '02162013',
         displayName: 'Makenzie',
-        currentBalance: '$1000.00'
+        currentBalance: '$1,000.00'
     },
     wnw: {
         user: 'wnw',
         pass: '05012012',
         displayName: 'Whitney',
-        currentBalance: '$900.00'
+        currentBalance: '$1,000.00'
     },
     wew: {
         user: 'wew',
         pass: '05022014',
         displayName: 'Weslyn',
-        currentBalance: '$900.00'
+        currentBalance: '$1,000.00'
     }
 };
 
