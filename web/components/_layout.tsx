@@ -12,10 +12,12 @@ export default function Layout({ children }: LayoutProps) {
         <title>AN/UG Financial</title>
         <link rel='icon' href='https://gmp.imgix.net/favicon.png' />
       </Head>
-      <header>
-        <img src='https://gmp.imgix.net/logo_transparent.png' />
-      </header>
-      <main className='container'>{children}</main>
+      <div className='flex flex-col items-center justify-center min-h-screen bg-gray-500'>
+        <header className='px-6 mb-4'>
+          <img src='https://gmp.imgix.net/ANUG_logo_transparent.png' />
+        </header>
+        <main className='container'>{children}</main>
+      </div>
     </>
   )
 }

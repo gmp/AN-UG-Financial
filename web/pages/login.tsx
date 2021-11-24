@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 
 const Login: NextPage = () => {
   return (
-    <form className='container m-auto px-4'>
+    <form className='m-auto px-4'>
       <div className='block'>
         <label htmlFor='username'>Username</label>
         <input type='text' id='username' className='
