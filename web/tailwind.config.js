@@ -5,7 +5,12 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      skew: {
+        '37': '37deg',
+        '-37': '-37deg'
+      }
+    },
   },
   variants: {
     extend: {},
